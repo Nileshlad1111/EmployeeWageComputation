@@ -22,7 +22,7 @@ public class EmpWageBuilder {
         //size
         int maximumSize = 3;
 
-            while (total_day < total_working_day) {
+            while (total_day < total_working_day && total_hour < 100) {
                 int empCheck = attendance.nextInt(maximumSize);
                 switch (empCheck) {
                     case 1:
