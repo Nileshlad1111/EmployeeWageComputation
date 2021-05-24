@@ -16,6 +16,12 @@ public class EmployeeWage {
         return half_time;
     }
 
+    public int getTotal_hour() {
+        return total_hour;
+    }
+
+
+
     //constructor
     public EmployeeWage(int half_time, int wage_per_hour, int hour_in_day, int present, int totalWage, int total_day, int total_hour, int total_working_day) {
         this.half_time = half_time;
@@ -28,9 +34,7 @@ public class EmployeeWage {
         this.total_working_day = total_working_day;
     }
 
-    public void setHalf_time(int half_time) {
-        this.half_time = half_time;
-    }
+
 
     public int getWage_per_hour() {
         return wage_per_hour;
@@ -72,9 +76,7 @@ public class EmployeeWage {
         this.total_day = total_day;
     }
 
-    public int getTotal_hour() {
-        return total_hour;
-    }
+
 
     public void setTotal_hour(int total_hour) {
         this.total_hour = total_hour;
