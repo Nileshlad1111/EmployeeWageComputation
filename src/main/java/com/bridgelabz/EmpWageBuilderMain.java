@@ -26,7 +26,7 @@ public class EmpWageBuilderMain {
             int workingHourPerMonth=sc.nextInt();
 
             //Creating object of the Employee Data access Object
-            EmployeeWage ed=new EmployeeWage(4, wage_per_hour, 8, 1, 0,0,0);
+            EmployeeWage ed = new EmployeeWage(4, wage_per_hour, 8, 1, 0,0,0);
 
             //Creating the object to plain java old object class
             EmployeeWageWorking employeeWageWorking = new EmployeeWageWorking();
@@ -44,6 +44,11 @@ public class EmpWageBuilderMain {
 
             //Adding the each total wage in array list, fetching from employee builder
             wagePerCompany.add(empWageBuilder.getTotalWage());
+
+            //Adding the Daily Wage into same Array List
+            wagePerCompany.add(employeeWageWorking.WagePerDay(workingHourPerMonth, workingDayInMonth, ed.getHalf_time(),ed.getWage_per_hour(), ed.getHour_in_day(), ed.getTotalWage(), ed.getTotal_day(),ed.getTotal_hour(),ed.getTotal_working_day()));
+
+
         }
         for(Object wage: wagePerCompany)
         {
