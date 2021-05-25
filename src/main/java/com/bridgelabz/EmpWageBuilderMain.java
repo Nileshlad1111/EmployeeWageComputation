@@ -1,6 +1,4 @@
 package com.bridgelabz;
-
-
 import java.util.Scanner;
 
 public class EmpWageBuilderMain {
@@ -13,8 +11,6 @@ public class EmpWageBuilderMain {
         int limit=sc.nextInt();
         for (int i=1;i<=limit; i++)
         {
-
-
             System.out.println("Enter your company Name : ");
             String company=sc.next();
             System.out.println("Enter the Wage per hour :");
@@ -24,10 +20,16 @@ public class EmpWageBuilderMain {
             System.out.println("Enter Working hour per month : ");
             int workingHourPerMonth=sc.nextInt();
 
-            EmployeeWage ed=new EmployeeWage(4, wage_per_hour, 8, 1, 0,0,0,0);
-            EmployeeWageWorkiing employeeWageWorkiing = new EmployeeWageWorkiing();
+            EmployeeWage ed=new EmployeeWage(4, wage_per_hour, 8, 1, 0,0,0);
+            EmployeeWageWorking employeeWageWorking = new EmployeeWageWorking();
+            EmpWageBuilder empWageBuilder=new EmpWageBuilder();
             System.out.println("Thank you for using our services : " +company + " :-) ");
-            System.out.println("Your Calculated Total Wage : " +employeeWageWorkiing.calculate_Total_Wage(workingHourPerMonth,workingDayInMonth,3, ed.getHalf_time(),ed.getWage_per_hour(), ed.getHour_in_day(),ed.getPresent(), ed.getPresent(), ed.getTotalWage() ,ed.getTotal_hour(),ed.getTotal_working_day()));
+            int totalWage=employeeWageWorking.calculate_Total_Wage(workingHourPerMonth, workingDayInMonth, ed.getHalf_time(),ed.getWage_per_hour(), ed.getHour_in_day(), ed.getTotalWage(), ed.getTotal_day(),ed.getTotal_hour(),ed.getTotal_working_day());
+            System.out.println("TotalWage for " + company + "=" +totalWage);
+            empWageBuilder.setCompanyName(company);
+            empWageBuilder.setTotalWage(totalWage);
+            System.out.println("Company : "+empWageBuilder.getCompanyName());
+            System.out.println("TotalWage :" +empWageBuilder.getTotalWage());
         }
     }
 }

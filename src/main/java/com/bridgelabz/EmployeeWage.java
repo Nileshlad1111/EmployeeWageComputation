@@ -2,15 +2,24 @@ package com.bridgelabz;
 
 public class EmployeeWage {
     //variable
-    int half_time;
-    int wage_per_hour;
-    int hour_in_day;
-    int present;
-    int totalWage;
-    int total_day;
-    int total_hour;
-    int total_working_day;
+    private int half_time;
+    private int wage_per_hour;
+    private int hour_in_day;
+    private int totalWage;
+    private int total_day;
+    private int total_hour;
+    private int total_working_day;
 
+    //constructor
+    public EmployeeWage(int half_time, int wage_per_hour, int hour_in_day , int totalWage, int total_day, int total_hour, int total_working_day) {
+        this.half_time = half_time;
+        this.wage_per_hour = wage_per_hour;
+        this.hour_in_day = hour_in_day;
+        this.totalWage = totalWage;
+        this.total_day = total_day;
+        this.total_hour = total_hour;
+        this.total_working_day = total_working_day;
+    }
 
     public int getHalf_time() {
         return half_time;
@@ -19,22 +28,6 @@ public class EmployeeWage {
     public int getTotal_hour() {
         return total_hour;
     }
-
-
-
-    //constructor
-    public EmployeeWage(int half_time, int wage_per_hour, int hour_in_day, int present, int totalWage, int total_day, int total_hour, int total_working_day) {
-        this.half_time = half_time;
-        this.wage_per_hour = wage_per_hour;
-        this.hour_in_day = hour_in_day;
-        this.present = present;
-        this.totalWage = totalWage;
-        this.total_day = total_day;
-        this.total_hour = total_hour;
-        this.total_working_day = total_working_day;
-    }
-
-
 
     public int getWage_per_hour() {
         return wage_per_hour;
@@ -52,14 +45,6 @@ public class EmployeeWage {
         this.hour_in_day = hour_in_day;
     }
 
-    public int getPresent() {
-        return present;
-    }
-
-    public void setPresent(int present) {
-        this.present = present;
-    }
-
     public int getTotalWage() {
         return totalWage;
     }
@@ -75,8 +60,6 @@ public class EmployeeWage {
     public void setTotal_day(int total_day) {
         this.total_day = total_day;
     }
-
-
 
     public void setTotal_hour(int total_hour) {
         this.total_hour = total_hour;
