@@ -6,12 +6,12 @@ public class EmployeeWageWorking implements EmployeeWageMethod {
     public final int max=3;
     int absentee=0;
     int fullDay=0;
-    Random attence=new Random();
+    Random attendance =new Random();
     public int calculate_Total_Wage(int workingHourPerMonth, int workingDayInMonth, int half_time, int wage_per_hour, int hour_in_day, int totalWage, int total_day, int total_hour, int total_working_day) {
 
         while ((total_day <= workingDayInMonth && total_hour <= workingHourPerMonth))
         {
-            int check=attence.nextInt(max);
+            int check= attendance.nextInt(max);
 
             switch (check)
             {
