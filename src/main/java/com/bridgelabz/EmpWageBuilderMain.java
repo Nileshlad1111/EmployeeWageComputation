@@ -1,5 +1,6 @@
 package com.bridgelabz;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class EmpWageBuilderMain {
@@ -8,6 +9,9 @@ public class EmpWageBuilderMain {
     public static void main(String[] args) {
         //Declaring Array List to store the total Employee wage of company
         ArrayList<Object> wagePerCompany=new ArrayList<>();
+
+        //Declaring the Has map to store total wage for query by company
+        HashMap totalWageOfCompany=new HashMap();
 
         //creating object of scanner class to take input from user
         Scanner sc=new Scanner(System.in);
@@ -43,6 +47,7 @@ public class EmpWageBuilderMain {
             System.out.println("TotalWage :" +empWageBuilder.getTotalWage());
 
             //Adding the each total wage in array list, fetching from employee builder
+            totalWageOfCompany.put(company,empWageBuilder.getTotalWage() );
             wagePerCompany.add(empWageBuilder.getTotalWage());
 
             //Adding the Daily Wage into same Array List
@@ -54,5 +59,10 @@ public class EmpWageBuilderMain {
         {
             System.out.println(wage);
         }
+             //Checking the total wage with company Name
+            System.out.println("Enter the company name to get total wage");
+            String comp=sc.next();
+            System.out.println("Total wage of company : "+comp+" = " +totalWageOfCompany.get(comp));
+
     }
 }
